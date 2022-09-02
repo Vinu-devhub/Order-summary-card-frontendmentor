@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap');
+
+:root {
+    /* Primary */
+    --pale-blue : hsl(225, 100%, 94%);
+    --bright-blue : hsl(245, 75%, 52%);
+
+    /* Secondary */
+    --Ghost-White : hsl(228, 100%, 98%);
+    --Shadow-Blue : hsl(224, 23%, 55%);
+    --Space-Cadet : hsl(223, 47%, 23%);
+
+    /* Font family */
+    --font-red-hat : 'Red Hat Display', sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-color: hsl(225, 100%, 94%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    font-family: 'Red Hat Display', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.card {
+
+    max-width: 400px;
+    border-radius: 15px;
+    background-color: var(--Ghost-White);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.card_img {
+    position: relative;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Card Header */
+
+
+.card .card_img img{
+    width: 100%;
+    object-fit: fill;
+}
+
+/* /Card Header */
+
+/* Card Body */
+
+.card-body {
+    padding: 30px 20px;
+    margin: 0 35px;
+    text-align: center;
+}
+.card-body .card_title {
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--Space-Cadet);
+    margin-bottom: 20px;   
+}
+
+.card-body .card_desc{
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--Shadow-Blue);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.card-body .card_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0 20px;
+}
+
+.card-body .card_wrap .card_price {
+    display: flex;
+}
+
+.card-body .card_annual-price {
+    margin-left: 15px;
+    line-height: 1.6;
+}
+
+
+.card-body .card_annual-price h4 {
+    color: var(--Space-Cadet);
+    font-weight: 900;
+
+}
+
+.card-body .card_annual-price span {
+    color: var(--Shadow-Blue);
+    font-weight: 500;
+}
+
+.card-body .card_wrap .text_change {
+    color: var(--bright-blue);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.card-body .card_wrap .text_change:hover {
+    color: #7B68EE;
+    text-decoration: none;
+}
+
+
+
+
+/* /Card Body */
+
+
+/* Card Footer */
+
+.card-footer {
+    text-align: center;
+
+}
+
+.card-footer .pay_btn {
+    background-color: var(--bright-blue);
+    color: var(--Ghost-White);
+    padding: 15px 100px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.card-footer .pay_btn:hover {
+    background-color : #7B68EE;
+}
+
+.card-footer .cancel_btn-wrap {
+    padding: 30px 0;
+    margin-bottom: 20px;
+
+}
+
+
+
+.card-footer .cancel_btn {
+
+    color: var(--Shadow-Blue);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+
+
+}
+
+.card-footer .cancel_btn:hover {
+    color: var(--Space-Cadet);
+}
+
+
+/* Mobile view */
+
+@media screen and (max-width:640px) {
+
+    body {
+        background-image: url(/images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+    }
+    
+    .card {
+        max-width: 350px;
+    }
+
+    .card-body {
+        margin: 0 20px;
+    }
+
+    .card-body .card_wrap {
+        margin: 30px 0 10px 10px;
+    }
+
+    .card-body .card_title {
+       font-size: 1.5rem;
+    }
+
+    .card-body .card_annual-price {
+        font-size: 15px;
+    }
+
+    .card-body .card_wrap .text_change {
+        font-size: 14px;
+    }
+
+    .card-footer .pay_btn {
+        padding: 15px 90px;
+    }
+
+    .card-footer .cancel_btn {
+        font-size: 14px;
+    }
+
+    .card-footer .cancel_btn-wrap {
+        padding: 20px 0;
+        margin-bottom: 15px;
+    
+    }
+    
+
+
+}
